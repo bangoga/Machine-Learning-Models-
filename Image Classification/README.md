@@ -1,35 +1,12 @@
 
 
 Kaggle Project : Image classification to identify largest digit in image.
-Section number 551-002
-Team Name:themeanteam
-
-
-
-
-
-
-
-Team Members
-
-
-Khalil Mohsin
-khalil.mohsin@mail.mcgill.ca
-260631318
-Brian Hyung
-brian.hyung@mail.mcgill.ca
-260622837
-Jongwoo Shim
-Jongwoo.shim@mail.mcgill.ca
-260670012
-
-
-
 
 
 
 Introduction
 Over the last decade or so the incredible breakthroughs in machine learning have given rise to numerous uses of its algorithms, that were previously either not possible or too unreliable. One of the most commonly proposed problem that the machine learning algorithms have been able to solve is the idea of recognizing images by extracting information out of it and being able to classify them to a certain label. For example, given a set of labels Y1,Y2 . . . . Yi Y labelling different types of animals, can we make a machine learning model that could take input images X1 X2 . . . . Xjand give and output Y1,Y2. . . Yj Ysuch that YY. 
+
 In our defined problem we are given a set of grayscale images with different handwritten numbers and we want to make a model that could pick the biggest digit and be able to classify it accurately. The input x is hence a 3d matrix with 50,000, 64 x 64 pixels, and Y is the set of digits between 0 to 9. We approached this problem by first extracting the largest digit within each image as part of the preprocessing pipeline. Another important stage of preprocessing was to reduce the images to 28 x 28 pixels in order reduce the chances of overfitting and improve runtimes of our models. Additional stages involved data augmentation to increase the training data set. Our preprocessing pipeline produced a 3d matrix of ~80000 examples, each with dimensions of  28 x 28 pixels, which we used to train three different classifiers: a linear support vector machine (SVM), a dense feed-forward neural network, and a convolutional neural network (CNN). 
 The levels of accuracy performance varied across our models. The linear SVM, after hyperparameter tuning, achieved 75.42% on the validation dataset and 67% on the test dataset. The dense feed-forward network, with five layers with 28 nodes each achieved 98% accuracy on the validation dataset. The CNN performed the best, with a validation dataset accuracy of 99.6% and 94.57% on the test dataset. 
 
